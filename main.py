@@ -29,7 +29,7 @@ def initate_edusafe():
     driver.get("https://www.edusafe.io/login")
 
     emailElement = find_element_by_XPATH("/html[1]/body[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/form[1]/div[1]/div[1]/div[1]/input[1]", driver, failed)
-    failedCheck()
+    failedCheck(failed)
 
     email = "allenn@albertcollege.ca"
     for i in email:
@@ -39,7 +39,7 @@ def initate_edusafe():
         time.sleep(0.05 + ranDelay)
 
     passwordElement = find_element_by_XPATH("/html[1]/body[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/form[1]/div[1]/div[2]/div[1]/input[1]", driver, failed)
-    failedCheck()
+    failedCheck(failed)
 
     password = "Ngen10HK583"
     for i in password:
@@ -48,15 +48,106 @@ def initate_edusafe():
         ranDelay = (randNum - 10) / 1000
         time.sleep(0.05 + ranDelay)
 
+    time.sleep(0.3)
+
     loginButton = find_element_by_XPATH("/html[1]/body[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/form[1]/div[1]/button[1]/span[1]", driver, failed)
-    failedCheck()
+    failedCheck(failed)
     loginButton.click()
+
+    time.sleep(0.3)
+
+    startButton = find_element_by_XPATH("/html[1]/body[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[2]/div[1]/button[1]", driver, failed)
+    failedCheck(failed)
+    startButton.click()
+
+    time.sleep(0.3)
+
+    yesButton = find_element_by_XPATH("/html[1]/body[1]/div[1]/div[1]/div[1]/div[2]/div[2]/div[1]/button[1]/span[1]", driver, failed)
+    failedCheck(failed)
+    yesButton.click()
+
+    time.sleep(0.3)
+
+    noButton = find_element_by_XPATH("/html[1]/body[1]/div[1]/div[1]/div[1]/div[2]/div[2]/div[2]/button[1]", driver, failed)
+    failedCheck(failed)
+    noButton.click()
+
+    time.sleep(0.3)
+
+    noButtonTwo = find_element_by_XPATH("/html[1]/body[1]/div[1]/div[1]/div[1]/div[2]/div[2]/div[2]/button[1]/span[1]", driver, failed)
+    failedCheck(failed)
+    noButtonTwo.click()
+
+    time.sleep(0.3)
+
+    noButtonThree = find_element_by_XPATH("/html[1]/body[1]/div[1]/div[1]/div[1]/div[2]/div[2]/div[2]/button[1]/span[1]", driver, failed)
+    failedCheck(failed)
+    noButtonThree.click()
+
+    time.sleep(0.3)
+
+    noButtonFour = find_element_by_XPATH("/html[1]/body[1]/div[1]/div[1]/div[1]/div[2]/div[2]/div[2]/button[1]/span[1]", driver, failed)
+    failedCheck(failed)
+    noButtonFour.click()
+
+    time.sleep(0.3)
+
+    noButtonFive = find_element_by_XPATH("/html[1]/body[1]/div[1]/div[1]/div[1]/div[2]/div[2]/div[2]/button[1]/span[1]", driver, failed)
+    failedCheck(failed)
+    noButtonFive.click()
+
+    time.sleep(0.3)
+
+    noButtonSix = find_element_by_XPATH("/html[1]/body[1]/div[1]/div[1]/div[1]/div[2]/div[2]/div[2]/button[1]/span[1]", driver, failed)
+    failedCheck(failed)
+    noButtonSix.click()
+
+    time.sleep(0.3)
+
+    noButtonSeven = find_element_by_XPATH("/html[1]/body[1]/div[1]/div[1]/div[1]/div[2]/div[2]/div[2]/button[1]/span[1]", driver, failed)
+    failedCheck(failed)
+    noButtonSeven.click()
+
+    time.sleep(0.3)
+
+    noButtonEight = find_element_by_XPATH("/html[1]/body[1]/div[1]/div[1]/div[1]/div[2]/div[2]/div[2]/button[1]/span[1]", driver, failed)
+    failedCheck(failed)
+    noButtonEight.click()
+
+    time.sleep(0.3)
+
+    noButtonNine = find_element_by_XPATH("/html[1]/body[1]/div[1]/div[1]/div[1]/div[2]/div[2]/div[2]/button[1]/span[1]", driver, failed)
+    failedCheck(failed)
+    noButtonNine.click()
+
+    time.sleep(0.3)
+
+    noButtonTen = find_element_by_XPATH("/html[1]/body[1]/div[1]/div[1]/div[1]/div[2]/div[2]/div[2]/button[1]/span[1]", driver, failed)
+    failedCheck(failed)
+    noButtonTen.click()
+
+    time.sleep(0.3)
+
+    noButtonEleven = find_element_by_XPATH("/html[1]/body[1]/div[1]/div[1]/div[1]/div[2]/div[2]/div[2]/button[1]/span[1]", driver, failed)
+    failedCheck(failed)
+    noButtonEleven.click()
+
+    time.sleep(0.3)
+
+    noButtonTwelve = find_element_by_XPATH("/html[1]/body[1]/div[1]/div[1]/div[1]/div[2]/div[2]/div[2]/button[1]/span[1]", driver, failed)
+    failedCheck(failed)
+    noButtonTwelve.click()
+
+    time.sleep(0.3)
+
+    okButton = find_element_by_XPATH("/html[1]/body[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[2]/div[2]/div[1]/button[1]", driver, failed)
+    failedCheck(failed)
+    okButton.click()
+    time.sleep(5)
+    driver.quit()
 
 while True:
     # Do thing here
-
-    initate_edusafe()
-    
 
     defaultTime = 86400
     randNum = randint(-720, 720)
@@ -76,5 +167,9 @@ while True:
         # Minus the extra time
         waitingTime =- secondsDifference
 
+    print("Waiting {} seconds for next edusafe action, randomized time: {}",waitingTime, randNum)
 
-    time.sleep(waitingTime)
+    if waitingTime > 0:
+        time.sleep(waitingTime)
+
+    initate_edusafe()
